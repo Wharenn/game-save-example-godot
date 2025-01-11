@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx5n1f0y8dxcf"]
+
+[ext_resource type="Script" path="res://src/GameContent/UI/SaveSlotSelectionMenu/SaveSlotSelectionMenu.cs" id="1_34jde"]
+[ext_resource type="PackedScene" uid="uid://c4syeol30qj6j" path="res://src/GameContent/UI/SaveSlotSelectionMenu/SaveSlotGridItem.tscn" id="3_yx1m8"]
+[ext_resource type="PackedScene" uid="uid://8enhek4a5cr1" path="res://src/GameContent/UI/ConfirmScreen.tscn" id="6_5tc72"]
+
+[node name="SaveSlotSelectionMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.000747423
+script = ExtResource("1_34jde")
+SaveSlotGridItemScene = ExtResource("3_yx1m8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.184314, 0.282353, 0.345098, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpacincControl" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Label_Title"
+text = "Select a save slot"
+horizontal_alignment = 1
+
+[node name="SpacincControl2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer2/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="SaveSlotGridItem" parent="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer" instance=ExtResource("3_yx1m8")]
+layout_mode = 2
+script = null
+
+[node name="SaveSlotGridItem2" parent="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer" instance=ExtResource("3_yx1m8")]
+layout_mode = 2
+script = null
+
+[node name="SaveSlotGridItem3" parent="VBoxContainer/MarginContainer2/ScrollContainer/GridContainer" instance=ExtResource("3_yx1m8")]
+layout_mode = 2
+script = null
+
+[node name="ConfirmScreen" parent="." instance=ExtResource("6_5tc72")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(192, -274)
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 35
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 25
+
+[node name="BackButton" type="Button" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back"

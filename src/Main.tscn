@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://jfkangltofcl"]
+
+[ext_resource type="Script" path="res://src/Main.cs" id="1_k06qv"]
+[ext_resource type="PackedScene" uid="uid://cqjwr60g7g6b6" path="res://src/GameContent/UI/MainMenu.tscn" id="1_rah7h"]
+[ext_resource type="PackedScene" uid="uid://cdrpbc4xfapai" path="res://src/GameContent/UI/CreateCharacterScreen.tscn" id="4_qar08"]
+[ext_resource type="PackedScene" uid="uid://dx5n1f0y8dxcf" path="res://src/GameContent/UI/SaveSlotSelectionMenu/SaveSlotSelectionMenu.tscn" id="7_g61jb"]
+
+[node name="Main" type="Node"]
+process_mode = 3
+script = ExtResource("1_k06qv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("1_rah7h")]
+unique_name_in_owner = true
+process_mode = 3
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="SaveSlotSelectionMenu" parent="CanvasLayer" instance=ExtResource("7_g61jb")]
+unique_name_in_owner = true
+
+[node name="CreateCharacterScreen" parent="CanvasLayer" instance=ExtResource("4_qar08")]
+unique_name_in_owner = true
+visible = false

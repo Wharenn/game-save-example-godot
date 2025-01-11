@@ -1,0 +1,2 @@
+markdown2==2.5.1
+pdfkit==1.0.0

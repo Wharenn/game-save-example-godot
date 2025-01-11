@@ -1,0 +1,22 @@
+version: '3'
+
+dotenv: ['.env']
+
+vars:
+  reset: "\033[0m"
+  green: "\033[1;32m"
+  red: "\033[1;31m"
+  blue: "\033[1;34m"
+
+tasks:
+  install:
+    cmds:
+      - gettext --version || brew install gettext
+      - godotenv --version || dotnet tool install --global Chickensoft.GodotEnv
+      - mkdir -p .addons && touch .addons/.gdignore
+      - godotenv addons install
+
+  run:
+    desc: Run the project
+    cmds:
+      - GODOT

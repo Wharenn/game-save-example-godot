@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4syeol30qj6j"]
+
+[ext_resource type="Script" path="res://src/GameContent/UI/SaveSlotSelectionMenu/SaveSlotGridItem.cs" id="1_c1dno"]
+
+[node name="SaveSlotGridItem" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0.7)
+custom_minimum_size = Vector2(250, 160)
+offset_right = 249.0
+offset_bottom = 158.0
+script = ExtResource("1_c1dno")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="SpacingControl2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Debug"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "<slot_name>"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="SavedAtLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "<Yesterday>"
+horizontal_alignment = 1
+
+[node name="SpacingControl" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="SelectButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "Select
+"

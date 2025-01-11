@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.vscode
+.godot/
+.addons
+addons/*
+!addons/.editorconfig
+build/*
+!build/.gitkeep
+node_modules/*
+doc/ignored-files-in-progress/*
+.version
+CHANGELOG.md
