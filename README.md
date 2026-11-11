@@ -14,8 +14,8 @@ Install the project dependencies:
 task install
 ```
 
-Install Godot 4.3:
+Install Godot 4.7:
 
 ```bash
-godotenv godot install 4.3.0
+godotenv godot install 4.7.2
 ```
